@@ -1,0 +1,33 @@
+{
+  "name": "sk-sparkpost-webhook",
+  "version": "1.0.0",
+  "description": "A Skellington plugin to get a sample SparkPost webhook payload",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint index.js test/",
+    "test": "echo coming soon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colestrode/sk-sparkpost-webhook.git"
+  },
+  "keywords": [
+    "skellington",
+    "botkit",
+    "sparkpost",
+    "webhook"
+  ],
+  "author": "Cole Furfaro-Strode",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/colestrode/sk-sparkpost-webhook/issues"
+  },
+  "homepage": "https://github.com/colestrode/sk-sparkpost-webhook#readme",
+  "dependencies": {
+    "q": "^1.4.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.4.0"
+  }
+}

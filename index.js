@@ -2,9 +2,9 @@
 
 let request = require('request');
 let q = require('q');
+let plugin = module.exports;
 
-module.exports = (controller) => {
-
+plugin.init = (controller) => {
   controller.hears('webhooks sample(s)?( events)?(:)?\\s*(.*)', 'direct_message,direct_mention', (bot, message) => {
     let promiseRequest = q.nfbind(request);
     let promiseUpload = q.nbind(bot.api.files.upload, bot.api.files);
@@ -22,6 +22,7 @@ module.exports = (controller) => {
     return promiseRequest(requestConfig)
       .then((result) => {
         let response = result[0];
+
         return JSON.stringify(JSON.parse(response.body), null, 2);
       })
       .then((content) => {
@@ -46,7 +47,7 @@ module.exports = (controller) => {
   });
 };
 
-module.exports.help = {
+plugin.help = {
   command: 'webhooks',
   text: (helpConfig) => {
     return 'Type `@' + helpConfig.botName + ' webhooks sample events` to get a list of all events. \n' +

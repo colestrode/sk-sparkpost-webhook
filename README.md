@@ -7,7 +7,7 @@ A [Skellington](https://github.com/colestrode/skellington) plugin to get a sampl
 
 ## Getting Sample Events
 
-This plugin will upload a sample SparkPost webhook payload and upload it as a file
+This plugin will upload a sample [SparkPost](https://developers.sparkpost.com) webhook payload and upload it as a file
 in your Slack channel:
 
 `@bot webhooks sample events`
